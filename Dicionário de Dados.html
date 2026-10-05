@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo Concetual - Relacionamentos e Cardinalidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      border-top: 2px solid #000000;
+      border-bottom: 2px solid #000000;
+      padding: 10px 8px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    td {
+      padding: 10px 8px;
+      vertical-align: top;
+      border-bottom: 1px solid #e0e0e0;
+      line-height: 1.4;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 2px solid #000000;
+    }
+
+    .entidade {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>1. Modelo concetual</h1>
+  <p>Este modelo representa o sistema de gestão do restaurante e entregas, definindo as entidades envolvidas na operação, os seus relacionamentos e as respetivas cardinalidades[cite: 5].</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Entidade</th>
+        <th style="width: 25%;">Relaciona-se com</th>
+        <th style="width: 55%;">Cardinalidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="entidade">CLIENTE</td>
+        <td class="entidade">PEDIDO</td>
+        <td>1:N — um cliente pode efetuar várias encomendas, cada encomenda pertence a um único cliente</td>
+      </tr>
+      <tr>
+        <td class="entidade">ENTREGADOR</td>
+        <td class="entidade">PEDIDO</td>
+        <td>1:N — um entregador realiza várias entregas, cada encomenda é entregue por um único entregador</td>
+      </tr>
+      <tr>
+        <td class="entidade">PEDIDO</td>
+        <td class="entidade">CONTA</td>
+        <td>1:1 — cada encomenda gera exatamente uma conta, cada conta diz respeito a uma única encomenda</td>
+      </tr>
+      <tr>
+        <td class="entidade">COLABORADOR</td>
+        <td class="entidade">PONTO</td>
+        <td>1:N — um colaborador regista presença em vários pontos, cada registo de ponto pertence a um único colaborador</td>
+      </tr>
+      <tr>
+        <td class="entidade">COLABORADOR</td>
+        <td class="entidade">ENTREGADOR</td>
+        <td>1:1 opcional — um colaborador pode ou não estar registado com a função de entregador</td>
+      </tr>
+      <tr>
+        <td class="entidade">FORNECEDOR</td>
+        <td class="entidade">PRODUTO</td>
+        <td>N:M — um fornecedor pode fornecer vários produtos, um produto pode ser fornecido por vários fornecedores</td>
+      </tr>
+      <tr>
+        <td class="entidade">PEDIDO</td>
+        <td class="entidade">PRODUTO</td>
+        <td>N:M — uma encomenda pode conter vários produtos, um produto pode constar em várias encomendas</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
