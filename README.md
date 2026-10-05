@@ -11,7 +11,6 @@
 - *Karoline Almeida de Araújo, RGM: 48379867*
 
 ## 1. Caracterização da Organização
-*(vale 7,5% — Dimensão Conceitual)*
 
 - **Nome e natureza da organização:** *Bar do Ernesto - Restaurante e Pizzaria*
 - **Contexto e porte:** *Organização com fins lucrativos; médio porte; no momento, possui 9 colaboradores; volume de vendas regular.*
@@ -22,14 +21,12 @@
 ---
 
 ## 2. Processos de Negócio
-*(vale 10% — Dimensão Procedimental)*
 
 - **Principais processos mapeados:** *Cadastros de cliente; Sistema de entrega; Fornecimento de ingrediente/utilidades; Cadastro de Funcionários; Controle de estoque.*
 
 ---
 
 ## 3. Requisitos do Sistema
-*(esta seção e a Seção 4 "Regras de Negócio" DIVIDEM 7,5% na dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na organização/documentação)*
 
 ### 3.1 Requisitos Funcionais
 *O que o sistema precisa FAZER (ex.: "o sistema deve permitir registrar uma venda").*
@@ -38,14 +35,12 @@
 - O sistema deve permitir a edição de endereço e número de telefone.
 
 ### 3.2 Requisitos Não Funcionais
-*Características de qualidade (ex.: desempenho, segurança, usabilidade, disponibilidade).*
 - Dados sensiveís como telefone e endereço devem ser criptografados e armazenados de forma segura;
 - Páginas com dados não sensiveís devem carregar em menos de 2 segundos;
 - O sistema deve permanecer ativo por aproximadamente 60% - 65% do dia.
 ---
 
 ## 4. Regras de Negócio
-*(esta seção DIVIDE com a Seção 3 "Requisitos do Sistema" os mesmos 7,5% da dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na documentação. "Regras de negócio" é o termo técnico usado em modelagem de dados para as regras de funcionamento de qualquer organização, com ou sem fins lucrativos)*
 
 - **Regras operacionais:**
   - *Identificador Principal*: Número do telefone/WhatsApp cadastrado como nome de identificação.
@@ -56,7 +51,6 @@
   - Módulo de Fornecedores
   - *Dados do Cadastro*: Nome do fornecedor, produtos fornecidos e prazo médio de entrega.
   - *Canais de Pedido Preferenciais*: Marcação do canal direto para compras (Aplicativo, WhatsApp ou Ligação Telefônica).
-
 
 ---
 
@@ -128,7 +122,15 @@ Para cada entidade identificada, liste:
   - *id_ponto*;
   - *num_pedido*;
   - *num_conta*.
-- **Relacionamentos pertinentes:** *Pagamento, Fazer Pedido, Entregar Pedido, Possuir.* 
+
+- **Relacionamentos pertinentes:**
+  - *Fazer Pedido*;
+  - *Entregar Pedido*;
+  - *Possui*;
+  - *Itens Pedidos*;
+  - *Fornece*;
+  - *Pode ser*;
+  - *Registra*;
 
 ---
 
