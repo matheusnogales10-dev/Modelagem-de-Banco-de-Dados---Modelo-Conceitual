@@ -70,9 +70,11 @@ Para cada entidade identificada, liste:
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 *(vale 7,5% na dimensão conceitual)*
 
-- **Entidades reconhecidas:** *Cliente* = quem solicita e recebe pedidos à longa distância; *Colaborador* = quem trabalha permanentemente num estabelecimento público ou privado; *Entregador* = encarregado da entrega das compras ao cliente; *Pedido* = produto que o cliente requisitou; *Conta* = pagamento a ser feito pelo serviço/pedido.
-- **Atributos e classificações:** *Nome* = Cliente, Colaborador, Entregador; *Telefone* = Cliente, Colaborador, Entregador; *Endereço (Atributo Composto(Numero, Cidade, Rua, Bairro))* = Cliente, Colaborador. *Descrição* = Pedido; *Valor* = Conta; *Data_Vencimento* = Conta; *id_cliente*; *id_colaborador*; *id_entregador*; *num_pedido*; *num_conta*.
-- **Relacionamentos pertinentes:** *Pagamento, Fazer Pedido, Entregar Pedido, Possuir.* 
+- *** *Entidades Fortes:* Cliente, Colaborador, Fornecedor, Produto, Pedido.
+* *Entidades Dependentes/Fracas:* Entregador (vinculado a Colaborador), Conta (vinculada a Pedido), Ponto (vinculado a Colaborador).
+* *Atributos Compostos:*
+* endereco (do Cliente e do Colaborador) estruturado em rua, número, bairro, cidade, complemento, etc.
+* veiculo (do Entregador) estruturado em tipo, marca/modelo e placa.
 
 ---
 
