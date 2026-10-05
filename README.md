@@ -70,8 +70,56 @@ Para cada entidade identificada, liste:
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 *(vale 7,5% na dimensão conceitual)*
 
-- **Entidades reconhecidas:** *Cliente* = quem solicita e recebe pedidos à longa distância; *Colaborador* = quem trabalha permanentemente num estabelecimento público ou privado; *Entregador* = encarregado da entrega das compras ao cliente; *Pedido* = produto que o cliente requisitou; *Conta* = pagamento a ser feito pelo serviço/pedido.
-- **Atributos e classificações:** *Nome* = Cliente, Colaborador, Entregador; *Telefone* = Cliente, Colaborador, Entregador; *Endereço (Atributo Composto(Numero, Cidade, Rua, Bairro))* = Cliente, Colaborador. *Descrição* = Pedido; *Valor* = Conta; *Data_Vencimento* = Conta; *id_cliente*; *id_colaborador*; *id_entregador*; *num_pedido*; *num_conta*.
+**Entidades reconhecidas:**
+  - *Cliente* = quem solicita e recebe pedidos à longa distância;
+  - *Colaborador* = quem trabalha permanentemente num estabelecimento público ou privado;
+  - *Entregador* = encarregado da entrega das compras ao cliente;
+  - *Pedido* = item do cardápio que o cliente requisitou;
+  - *Conta* = pagamento a ser feito pelo serviço/pedido;
+  - *Produto* = matéria-prima que compõem o pedido;
+  - *Fornecedor* = aquele que fornece os produtos para o restaurante;
+  - *Ponto* = registro de presença do colaborador.
+
+- **Atributos e classificações:**
+  - *nome* = Cliente, Colaborador, Entregador;
+  - *telefone* = Cliente, Colaborador, Entregador;
+  - *endereco* (Atributo Composto) = Cliente, Colaborador;
+    - *rua* = Cliente, Colaborador;
+    - *numero* = Cliente, Colaborador;
+    - *bairro* = Cliente, Colaborador;
+    - *cidade* = Cliente, Colaborador.
+  - *descricao* = Produto;
+  - *valor* = Conta;
+  - *data_vencimento* = Conta;
+  - *canal_origem* = Pedido;
+  - *data_hora* = Pedido;
+  - *status_pedido* = Pedido;
+  - *status_pagamento* = Conta;
+  - *forma_pagamento* = Conta;
+  - *quantidade_atual* = Produto;
+  - *limite_minimo* = Produto;
+  - *unidade_media* = Produto;
+  - *produtos_fornecidos* = Fornecedor;
+  - *prazo_medio_entrega* = Fornecedor;
+  - *canal_preferencial* = Fornecedor;
+  - *veiculo* = Entregador;
+    - *tipo* = Entregador;
+    - *marca_modelo* = Entregador;
+    - *placa* = Entregador.
+  - *taxa_entrega_padrao* = Entregador;
+  - *curriculo_anexo* = Colaborador;
+  - *possui_dependentes* = Colaborador;
+  - *cargo* = Colaborador;
+  - *data* = Ponto;
+  - *status_presenca* = Ponto;
+  - *id_cliente*;
+  - *id_colaborador* = Colaborador, Entregador, Ponto;
+  - *id_entregador*;
+  - *id_produto*;
+  - *id_fornecedor*;
+  - *id_ponto*;
+  - *num_pedido*;
+  - *num_conta*.
 - **Relacionamentos pertinentes:** *Pagamento, Fazer Pedido, Entregar Pedido, Possuir.* 
 
 ---
