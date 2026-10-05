@@ -46,6 +46,19 @@
 
 ## 4. Regras de Negócio
 *(esta seção DIVIDE com a Seção 3 "Requisitos do Sistema" os mesmos 7,5% da dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na documentação. "Regras de negócio" é o termo técnico usado em modelagem de dados para as regras de funcionamento de qualquer organização, com ou sem fins lucrativos)*
+Módulo de Clientes
+ * Identificador Principal: Número do telefone/WhatsApp cadastrado como nome de identificação.
+ * Endereço de Entrega: Campo Obrigatório (Rua, número, bairro, complemento e ponto de referência). Sem endereço, o pedido não pode ser finalizado.
+ * Canais de Origem: Registro da origem da venda (iFood, 99, Ligação Direta ou WhatsApp).
+Módulo de Funcionários (Equipe de 9 Pessoas)
+ * Dados Obrigatórios:
+   * Nome completo
+   * Número de telefone / WhatsApp
+   * Endereço residencial completo
+   * Anexo do currículo
+   * Informação sobre dependentes (se possui filhos e quantidade)
+ * Regra de Ausência: Registro de presença/ponto com alerta automático imediato em caso de falta, atraso ou ausência não informada.
+ * Logística Interna: Configuração específica para os 1 a 2 Motoboys (controle de taxas de entrega, entregas concluídas e rotas).
 
 - **Regras operacionais:** *condições que a organização impõe (ex.: "um pedido só pode ser fechado se houver estoque disponível", "uma doação só pode ser registrada com identificação do doador", "um ritual só pode ser agendado se o espaço estiver disponível").*
 - **Restrições organizacionais:** *limitações que afetam o modelo (ex.: políticas internas, prazos, exigências legais, normas religiosas ou estatutárias) — e por que elas importam.*
@@ -59,20 +72,18 @@ Para cada entidade identificada, liste:
 
 | Atributo | Descrição | Regra de negócio associada |
 |----------|-----------|------------------------------|
-| *nome do atributo* | *o que ele representa* | *se houver alguma regra (obrigatoriedade, valores possíveis, etc.)* |
-
-*Mantenha o dicionário organizado e padronizado (mesmo formato de tabela para todas as entidades).*
-
-**Atenção à privacidade:** se forem usados exemplos de valores para ilustrar os atributos, esses exemplos devem ser **fictícios** — não utilize dados reais de clientes, fiéis, beneficiários, doadores ou funcionários da organização (nomes, CPFs, contatos etc.), mesmo que tenham sido observados durante a pesquisa de campo. Os exemplos devem apenas ser **coerentes com as operações reais** observadas.
+| Atributo:Endereço  |Descriçao: Refere-se a identificar a localização do Cliente e do Colaborador sobre o pedido| Regra: tem que ser estabelecido a confirmação do endereço do cliente para do pedido
+|Atributo: veiculo |Descrição: Utilizado pelo o Entregador para o transporte do pedido | Regra: tem que ser usado somete para levar o produto do cliente  
 
 ---
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 *(vale 7,5% na dimensão conceitual)*
 
-- **Entidades reconhecidas:** *Cliente* = quem solicita e recebe pedidos à longa distância; *Colaborador* = quem trabalha permanentemente num estabelecimento público ou privado; *Entregador* = encarregado da entrega das compras ao cliente; *Pedido* = produto que o cliente requisitou; *Conta* = pagamento a ser feito pelo serviço/pedido.
-- **Atributos e classificações:** *Nome* = Cliente, Colaborador, Entregador; *Telefone* = Cliente, Colaborador, Entregador; *Endereço (Atributo Composto(Numero, Cidade, Rua, Bairro))* = Cliente, Colaborador. *Descrição* = Pedido; *Valor* = Conta; *Data_Vencimento* = Conta; *id_cliente*; *id_colaborador*; *id_entregador*; *num_pedido*; *num_conta*.
-- **Relacionamentos pertinentes:** *Pagamento, Fazer Pedido, Entregar Pedido, Possuir.* 
+- **Entidades Fortes:* Cliente,colaborador,fornecedor,produto,Pedido.
+- **Entidades Dependetes:* Entregador(vinculado a colaborador), conta(vinculada a pedido),Ponto(vinculado a Colaborador).
+- **Atributos Compostos:* Endereço(do Cliente e do Colaborador) estruturado em rua número,bairro,cidade,complemento,etc
+- *veiculo (do Entregador) estruturado em tipo,marca/modelo e placa.
 
 ---
 
