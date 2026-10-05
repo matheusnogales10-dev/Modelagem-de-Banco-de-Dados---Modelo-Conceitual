@@ -16,7 +16,11 @@
 - **Contexto e porte:** *Organização com fins lucrativos; médio porte; no momento, possui 9 colaboradores; volume de vendas regular.*
 - **Problemas e necessidades identificados:** *O maior problema identificado é falta de organização e controle no estoque.*
 - **Justificativa da escolha:** *Um dos membros do grupo já era familiar com o dono do local*
-- **Evidências da organização:** *R. Abel Tavares, 2470 - Jardim Belem, São Paulo* ![Frente_do_Restaurante](Imagens/Restaurante1) 
+- **Evidências da organização:** *R. Abel Tavares, 2470 - Jardim Belem, São Paulo*
+![frente_do_restaurante](Imagens/IMG-20260928-WA0014.jpg)
+![porta_do_restaurante](Imagens/IMG-20260928-WA0012.jpg) 
+![dentro_do_restaurante](Imagens/IMG=20260928-WA0013.jpg)
+![foto_com_o_dono](Imagens/Foto_Dono.jpg)
 
 ---
 
@@ -54,23 +58,7 @@
 
 ---
 
-## 5. Dicionário de Dados Conceitual (Preliminar)
-*(vale 10% — Dimensão Procedimental - Segue o modelo do arquivo 02-03g_Exemplo_Dicionario_Dados.pdf)*
-
-Para cada entidade identificada, liste:
-
-| Atributo | Descrição | Regra de negócio associada |
-|----------|-----------|------------------------------|
-| *nome do atributo* | *o que ele representa* | *se houver alguma regra (obrigatoriedade, valores possíveis, etc.)* |
-
-*Mantenha o dicionário organizado e padronizado (mesmo formato de tabela para todas as entidades).*
-
-**Atenção à privacidade:** se forem usados exemplos de valores para ilustrar os atributos, esses exemplos devem ser **fictícios** — não utilize dados reais de clientes, fiéis, beneficiários, doadores ou funcionários da organização (nomes, CPFs, contatos etc.), mesmo que tenham sido observados durante a pesquisa de campo. Os exemplos devem apenas ser **coerentes com as operações reais** observadas.
-
----
-
-## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
-*(vale 7,5% na dimensão conceitual)*
+## 5. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 
 - **Entidades reconhecidas:**
   - *Cliente* = quem solicita e recebe pedidos à longa distância;
@@ -134,26 +122,19 @@ Para cada entidade identificada, liste:
 
 ---
 
-## 7. Diagrama Entidade-Relacionamento (DER)
-*(vale 20% — é o item de maior peso da entrega)*
+## 6. Diagrama Entidade-Relacionamento (DER)
 
-- Anexe o DER (em imagem).
-- O diagrama deve representar corretamente:
-  - Entidades
-  - Atributos
-  - Relacionamentos
-  - **Cardinalidades**
-- O modelo deve ser **consistente** e já demonstrar potencial de **escalabilidade e integração** (pensando nas próximas etapas do projeto).
+![DER_Conceitual](Imagens/SAVE_20261005_192245.jpg)
 
 ---
 
-## 8. Justificativa Técnica
+## 7. Justificativa Técnica
 
 *O grupo decidiu todos esses elementos para o diagrama, pois eles foram o que mais se encaixava e relacionava com o restaurante que estamos nos baseando, além de também termos discutido esse tema com o dono do restaurante, pedindo a opinião do mesmo com o que é necessário para a modelagem do banco de dados*
 
 ---
 
-## 9. Uso de Inteligência Artificial
+## 8. Uso de Inteligência Artificial
 
 | Item | O que registrar |
 |------|------------------|
@@ -167,23 +148,3 @@ Para cada entidade identificada, liste:
 | **Reflexão crítica** | Um erro bastante perceptível na IA, foi a repetição de atributos e até mesmo adicionando atributos e relacionamentos desnecessários para o diagrama. |
 
 ---
-
-## Critérios Atitudinais (20%)
-**Estes critérios NÃO constam explicitamente como item de entrega no README.** Eles são avaliados por meio de **Avaliação 360º entre os integrantes do grupo** (cada membro avalia os colegas de equipe) e, no caso da Colaboração, também pela **colaboração equilibrada no histórico de commits** do repositório GitHub — não pela leitura do restante do repositório nem pela apresentação:
-
-- **Participação (5%):** envolvimento nas discussões técnicas e nas decisões do grupo.
-- **Comprometimento (5%):** cumprimento de prazos e responsabilidades assumidas.
-- **Colaboração (5%):** respeito às contribuições dos colegas, cooperação na construção do projeto e colaboração equilibrada no histórico de commits do repositório GitHub.
-- **Autonomia (5%):** busca independente de soluções e proposta de melhorias.
-
----
-
-## Resumo dos Pesos
-
-| Dimensão | Peso total |
-|----------|-----------|
-| Conceitual (contexto, requisitos/regras, modelagem, justificativa técnica) | 30% |
-| Procedimental (requisitos, fluxogramas, dicionário de dados, DER) | 50% |
-| Atitudinal (participação, comprometimento, colaboração, autonomia) | 20% |
-
-**Entrega final:** README.md completo + DER + Dicionário de Dados em HTML (com exceção dos cursos GTI) anexado no repositório GitHub do grupo.
