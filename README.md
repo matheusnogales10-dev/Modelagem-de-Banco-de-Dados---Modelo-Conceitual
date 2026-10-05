@@ -148,29 +148,23 @@ Para cada entidade identificada, liste:
 ---
 
 ## 8. Justificativa Técnica
-*(vale 7,5% — sozinho, é o subcritério de maior peso dentro da Dimensão Conceitual)*
 
-*Explique e defenda as decisões de abstração e modelagem tomadas: por que essas entidades, esses atributos, esses relacionamentos e essas cardinalidades — e não outras alternativas possíveis?*
+*O grupo decidiu todos esses elementos para o diagrama, pois eles foram o que mais se encaixava e relacionava com o restaurante que estamos nos baseando, além de também termos discutido esse tema com o dono do restaurante, pedindo a opinião do mesmo com o que é necessário para a modelagem do banco de dados*
 
 ---
 
 ## 9. Uso de Inteligência Artificial
-*(documentação obrigatória — não é opcional se o grupo usou IA em qualquer etapa: pesquisa, escrita, organização de ideias ou revisão de texto)*
-
-Se o grupo usou alguma ferramenta de IA (ChatGPT, Claude, Gemini, Perplexity etc.) em qualquer parte do trabalho, registre **para cada uso relevante**:
 
 | Item | O que registrar |
 |------|------------------|
-| **Ferramenta e etapa** | Qual IA foi usada e em qual parte do trabalho (ex.: pesquisa sobre o setor da organização, redação do README, organização dos requisitos, revisão ortográfica/gramatical). |
-| **Motivação** | Por que o grupo recorreu à IA nesse ponto específico. |
-| **Prompt(s) utilizados** | Texto exato (ou muito próximo) do que foi perguntado/pedido à IA. |
-| **Resposta recebida** | Resumo ou trecho relevante da resposta da IA. |
-| **Fontes consultadas e verificadas** | Se a IA citou fontes/dados, quais foram checadas pelo grupo e como (ex.: comparação com o que foi observado na visita de campo). |
-| **Trechos rejeitados ou corrigidos** | O que da resposta da IA foi descartado, editado ou corrigido manualmente, e por quê. |
-| **Justificativa da escolha final** | Por que o grupo manteve, adaptou ou rejeitou o que a IA sugeriu. |
-| **Reflexão crítica** | Limites, vieses ou erros identificados no uso da IA nessa etapa (ex.: informação desatualizada, alucinação, generalização incorreta sobre o tipo de organização). |
-
-*Se o grupo não usou nenhuma ferramenta de IA, declare isso explicitamente nesta seção.*
+| **Ferramenta e etapa** | O Gemini foi utilizado para auxiliar no desenvolvimento do DER, mostrando um exemplo de como poderíamos desenvolver o diagrama. |
+| **Motivação** | Nossa motivação para utilizá-la, foi para agilizar o desenvolvimento do diagrama. |
+| **Prompt(s) utilizados** | "Crie um DER (Diagrama Entidade Relacionamento) geral e conceitual, que mapeie todos os principais processos do restaurante. Utilize as entidades, atributos e relacionamentos que citamos além da liberdade de criar mais deles. Os atributos endereço e tipos de veiculos devem ser compostos."  |
+| **Resposta recebida** | Foi recebido uma proposta de DER baseado em nosso material que foi mapeado pelo grupo (Entidades, atributos, relacionamentos, e outros materiais que foram anotados durante a nossa visita ao restaurante). |
+| **Fontes consultadas e verificadas** | A maioria das fontes fornecidas foram do conteúdo que disponibilizamos para a mesma. |
+| **Trechos rejeitados ou corrigidos** | O DER foi feito manualmente, e no meio de seu desenvolvimento, substituímos atributos e relacionamentos, afim de melhorar o entendimento sobre o diagrama. |
+| **Justificativa da escolha final** | A IA manteve todas as nossas entidades, relacionamentos e atributos, e portanto, decidimos manter e melhorar esse modelo. |
+| **Reflexão crítica** | Um erro bastante perceptível na IA, foi a repetição de atributos e até mesmo adicionando atributos e relacionamentos desnecessários para o diagrama. |
 
 ---
 
