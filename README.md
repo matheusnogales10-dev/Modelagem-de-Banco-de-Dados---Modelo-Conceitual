@@ -46,9 +46,26 @@
 
 ## 4. Regras de Negócio
 *(esta seção DIVIDE com a Seção 3 "Requisitos do Sistema" os mesmos 7,5% da dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na documentação. "Regras de negócio" é o termo técnico usado em modelagem de dados para as regras de funcionamento de qualquer organização, com ou sem fins lucrativos)*
-
-- **Regras operacionais:** *condições que a organização impõe (ex.: "um pedido só pode ser fechado se houver estoque disponível", "uma doação só pode ser registrada com identificação do doador", "um ritual só pode ser agendado se o espaço estiver disponível").*
-- **Restrições organizacionais:** *limitações que afetam o modelo (ex.: políticas internas, prazos, exigências legais, normas religiosas ou estatutárias) — e por que elas importam.*
+Módulo de Clientes
+ * Identificador Principal: Número do telefone/WhatsApp cadastrado como nome de identificação.
+ * Endereço de Entrega: Campo Obrigatório (Rua, número, bairro, complemento e ponto de referência). Sem endereço, o pedido não pode ser finalizado.
+ * Canais de Origem: Registro da origem da venda (iFood, 99, Ligação Direta ou WhatsApp).
+Módulo de Funcionários (Equipe de 9 Pessoas)
+ * Dados Obrigatórios:
+   * Nome completo
+   * Número de telefone / WhatsApp
+   * Endereço residencial completo
+   * Anexo do currículo
+   * Informação sobre dependentes (se possui filhos e quantidade)
+ * Regra de Ausência: Registro de presença/ponto com alerta automático imediato em caso de falta, atraso ou ausência não informada.
+ * Logística Interna: Configuração específica para os 1 a 2 Motoboys (controle de taxas de entrega, entregas concluídas e rotas).
+Módulo de Fornecedores
+ * Dados do Cadastro: Nome do fornecedor, produtos fornecidos e prazo médio de entrega.
+ * Canais de Pedido Preferenciais: Marcação do canal direto para compras (Aplicativo, WhatsApp ou Ligação Telefônica).
+2. Controle de Estoque e Alertas de Compra
+ * Quantidade Atual: Contagem contínua com baixa automática nas vendas e entrada manual/fiscal nas compras.
+ * Limite Mínimo (Estoque de Segurança): Definição de quantidade mínima parametrizável por item (ex: Coca-Cola, embalagens, insumos chave).
+ * Regra de Alerta de Compra: Quando a quantidade do produto atingir o limite mínimo, o sistema gera automaticamente uma notificação de reposição vinculada aos fornecedores cadastrados para aquele item.
 
 ---
 
@@ -58,21 +75,22 @@
 Para cada entidade identificada, liste:
 
 | Atributo | Descrição | Regra de negócio associada |
-|----------|-----------|------------------------------|
-| *nome do atributo* | *o que ele representa* | *se houver alguma regra (obrigatoriedade, valores possíveis, etc.)* |
 
-*Mantenha o dicionário organizado e padronizado (mesmo formato de tabela para todas as entidades).*
+| Atributo: Endereço| Descrição: permite a localização do cliente e do colaborador |regra: Apenas com a confirmação do cliente sobre o pedido.
 
-**Atenção à privacidade:** se forem usados exemplos de valores para ilustrar os atributos, esses exemplos devem ser **fictícios** — não utilize dados reais de clientes, fiéis, beneficiários, doadores ou funcionários da organização (nomes, CPFs, contatos etc.), mesmo que tenham sido observados durante a pesquisa de campo. Os exemplos devem apenas ser **coerentes com as operações reais** observadas.
+|Atributo: Veiculo | Descrição: levar o entregador com o pedido para o cliente| regra: somente o uso para o transporte do entregador.
+
 
 ---
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 *(vale 7,5% na dimensão conceitual)*
 
-- **Entidades reconhecidas:** *Cliente* = quem solicita e recebe pedidos à longa distância; *Colaborador* = quem trabalha permanentemente num estabelecimento público ou privado; *Entregador* = encarregado da entrega das compras ao cliente; *Pedido* = produto que o cliente requisitou; *Conta* = pagamento a ser feito pelo serviço/pedido.
-- **Atributos e classificações:** *Nome* = Cliente, Colaborador, Entregador; *Telefone* = Cliente, Colaborador, Entregador; *Endereço (Atributo Composto(Numero, Cidade, Rua, Bairro))* = Cliente, Colaborador. *Descrição* = Pedido; *Valor* = Conta; *Data_Vencimento* = Conta; *id_cliente*; *id_colaborador*; *id_entregador*; *num_pedido*; *num_conta*.
-- **Relacionamentos pertinentes:** *Pagamento, Fazer Pedido, Entregar Pedido, Possuir.* 
+* *Entidades Fortes:* Cliente, Colaborador, Fornecedor, Produto, Pedido.
+* *Entidades Dependentes/Fracas:* Entregador (vinculado a Colaborador), Conta (vinculada a Pedido), Ponto (vinculado a Colaborador).
+* *Atributos Compostos:*
+* endereco (do Cliente e do Colaborador) estruturado em rua, número, bairro, cidade, complemento, etc.
+* veiculo (do Entregador) estruturado em tipo, marca/modelo e placa.
 
 ---
 
