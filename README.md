@@ -47,8 +47,16 @@
 ## 4. Regras de Negócio
 *(esta seção DIVIDE com a Seção 3 "Requisitos do Sistema" os mesmos 7,5% da dimensão conceitual — juntas valem 7,5%, não 7,5% cada — + 4% exclusivos desta seção na documentação. "Regras de negócio" é o termo técnico usado em modelagem de dados para as regras de funcionamento de qualquer organização, com ou sem fins lucrativos)*
 
-- **Regras operacionais:** *condições que a organização impõe (ex.: "um pedido só pode ser fechado se houver estoque disponível", "uma doação só pode ser registrada com identificação do doador", "um ritual só pode ser agendado se o espaço estiver disponível").*
-- **Restrições organizacionais:** *limitações que afetam o modelo (ex.: políticas internas, prazos, exigências legais, normas religiosas ou estatutárias) — e por que elas importam.*
+- **Regras operacionais:**
+- * Identificador Principal: Número do telefone/WhatsApp cadastrado como nome de identificação.
+- *Endereço de Entrega*: Campo Obrigatório (Rua, número, bairro, complemento e ponto de referência). Sem endereço, o pedido não pode    ser finalizado.
+- *Canais de Origem**: Registro da origem da venda (iFood, 99, Ligação Direta ou WhatsApp).
+informada.
+- *Logística Interna**: Configuração específica para os 1 a 2 Motoboys (controle de taxas de entrega, entregas concluídas e rotas).
+- Módulo de Fornecedores
+- *Dados do Cadastro**: Nome do fornecedor, produtos fornecidos e prazo médio de entrega.
+- *Canais de Pedido Preferenciais**: Marcação do canal direto para compras (Aplicativo, WhatsApp ou Ligação Telefônica).
+
 
 ---
 
