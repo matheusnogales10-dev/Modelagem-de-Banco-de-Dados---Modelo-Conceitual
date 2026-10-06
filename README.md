@@ -19,7 +19,7 @@
 - **Evidências da organização:** *R. Abel Tavares, 2470 - Jardim Belem, São Paulo*
 ![frente_do_restaurante](Imagens/IMG-20260928-WA0014.jpg)
 ![porta_do_restaurante](Imagens/IMG-20260928-WA0012.jpg) 
-![dentro_do_restaurante](Imagens/IMG=20260928-WA0013.jpg)
+![dentro_do_restaurante](Imagens/IMG-20260928-WA0013.jpg)
 ![foto_com_o_dono](Imagens/Foto_Dono.jpg)
 
 ---
